@@ -1,12 +1,11 @@
 ---
 # TODO: list disks with ansible facts
-- name: list disks present in the system
-  shell: smartctl --scan | awk '{print $1}'
-  sudo_user: root
-  register: disks
+#- name: list disks present in the system
+#  shell: smartctl --scan | awk '{print $1}'
+#  sudo_user: root
+#  register: disks
 
 - name: create snapraid configuration file
-  sudo_user: root
-  template: src=snapraid.conf.j2 dest=/etc/snapraid.conf-ansible
+  template: src=snapraid.conf.j2 dest=/etc/snapraid.conf
     owner=root group=root mode=0644
   with_items: "{{ exceptions }}"
