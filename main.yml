@@ -1,0 +1,4 @@
+---
+- hosts: smartd
+  roles:
+    - { role: kalos.smartd }

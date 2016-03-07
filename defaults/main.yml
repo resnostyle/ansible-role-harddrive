@@ -1,0 +1,10 @@
+---
+exceptions:
+  - *.unrecoverable
+  - *.bak
+  - *.unrecoverable
+  - /tmp/
+  - /lost+found/
+  - .DS_Store
+  - .Thumbs.db
+  - Thumbs.db
